@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Budget Plannar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2> Monthly Budget Planner</h2>
+        
+        <div class="input-group">
+            <h3>Monthly Income</h3>
+            <input type="number" id="salaryInput" placeholder="Enter salary">
+            <button onclick="addSalary()">Add Salary</button>
+        </div>
+
+        <div class="input-group">
+            <h3>Monthly Expenses</h3>
+            
+            <div class="expense-category">
+                <h4>Housing</h4>
+                <input type="number" id="rentInput" placeholder="Rent/Mortgage">
+                <button onclick="addRent()">Add Rent</button>
+                <input type="number" id="utilitiesInput" placeholder="Utilities">
+                <button onclick="addUtilities()">Add Utilities</button>
+            </div>
+
+            <div class="expense-category">
+                <h4>Daily Living</h4>
+                <input type="number" id="groceriesInput" placeholder="Groceries">
+                <button onclick="addGroceries()">Add Groceries</button>
+                <input type="number" id="transportInput" placeholder="Transportation">
+                <button onclick="addTransport()">Add Transport</button>
+            </div>
+
+            <div class="expense-category">
+                <h4>Other Expenses</h4>
+                <input type="number" id="entertainmentInput" placeholder="Entertainment">
+                <button onclick="addEntertainment()">Add Entertainment</button>
+                <input type="number" id="miscInput" placeholder="Miscellaneous">
+                <button onclick="addMisc()">Add Misc</button>
+            </div>
+        </div>
+
+        <div class="savings-section">
+            <h3>Savings Goal</h3>
+            <input type="number" id="savingsInput" placeholder="Monthly savings target">
+            <button onclick="setSavingsGoal()">Set Savings Goal</button>
+            <p>Monthly Savings Goal: $<span id="savingsGoal">0</span></p>
+            <p>Actual Savings Possible: $<span id="actualSavings">0</span></p>
+        </div>
+
+        <div class="summary">
+            <h3>Monthly Summary</h3>
+            <p>Total Income: $<span id="totalIncome">0</span></p>
+            <p>Total Rent: $<span id="rentExpenses">0</span></p>
+            <p>Total Utilities: $<span id="utilitiesExpenses">0</span></p>
+            <p>Housing Expenses: $<span id="housingExpenses">0</span></p>
+            <p>Daily Living Expenses: $<span id="livingExpenses">0</span></p>
+            <p>Other Expenses: $<span id="otherExpenses">0</span></p>
+            <p>Total Monthly Expenses: $<span id="totalExpenses">0</span></p>
+            <p>Remaining Budget: $<span id="remainingBudget">0</span></p>
+        </div>
+
+        <div class="yearly-summary">
+            <h3>Yearly Projections</h3>
+            <p>Yearly Income: $<span id="yearlyIncome">0</span></p>
+            <p>Yearly Expenses: $<span id="yearlyExpenses">0</span></p>
+            <p>Potential Yearly Savings: $<span id="yearlySavings">0</span></p>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* Pre-Initializing CSS stuffs */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Quicksand", serif;
+}
+
+/* Containers */
+
+.container {
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "s m m m m m m m m m m"
+    "s m m m m m m m m m m"
+    "s m m m m m m m m m m"
+    "s m m m m m m m m m m"
+    "s m m m m m m m m m m"
+    "s m m m m m m m m m m"
+    "s m m m m m m m m m m"
+    "s f f f f f f f f f f";
+  height: 100vh;
+  filter: blur(8px);
+}
+
+/* General CSS Styling */
+
+h1 {
+  font-family: "Chewy", system-ui;
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3em;
+  line-height: 25px;
+}
+
+.rainbow {
+  width: 200px;
+  margin: 1em 1em;
+}
+
+/* Grid Items */
+
+.grid-item1 {
+  position: relative;
+  grid-area: s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 3px solid grey;
+}
+
+.grid-item2 {
+  grid-area: m;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(255,196,190);
+  background: linear-gradient(90deg, rgba(255,196,190,1) 0%, rgba(191,255,191,1) 49%, rgba(210,250,255,1) 97%, rgba(221,241,245,1) 100%);
+}
+
+.grid-item3 {
+  grid-area: f;
+}
+
+/* #colorInput is where the user puts their color of choice. */
+
+#colorInput {
+  width: 80%;
+  padding: 1em;
+  margin-top: 1.2em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Submit button for checking answer. */
+
+.submitButton {
+  width: 9em;
+  padding: 1em;
+  margin-top: 1em;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* Word Bank CSS */
+
+#wordBank {
+  width: 100%;
+  font-size: 2em;
+  margin-top: 1em;
+  padding: 0.3em;
+  overflow: auto;
+}
+
+/* Hint boxes*/
+
+.no-copy-box {
+  width: calc(100% - 40px);
+  margin-right: 30px;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+.hint-container {
+  width: 100%;
+  height: 100%;
+  background-color: #bbbbbb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+}
+
+/* The color blocks that show up when you click a hint */
+
+#colorBlocks {
+  width: 100%;
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.colorBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+
+.colorBlockText {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#hintButton {
+  width: 100%;
+  padding: 0.8em;
+}
+
+/* You Win */
+
+#youWin {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.youWinTitle {
+  font-size: 4em;
+  margin-bottom: 1em;
+}
+
+#tryAgainButton {
+  font-size: 2.5rem;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  background-color: white;
+}
+
+#tryAgainButton:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+
+/* Difficulty CSS */
+
+#difficulty {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Difficulty CSS -- Button Design */
+
+.difficultyBtnContainer > button {
+  font-size: 2.5rem;
+  padding: 0.2em 1em;
+  border-radius: 12px;
+  background-color: white;
+  margin: 1em;
+  transition-property: transform, background-color;
+  transition-duration: 0.5s;
+}
+
+.easy:hover {
+  transform: scale(1.25);
+  background-color: rgb(143, 218, 143);
+
+}
+
+.medium:hover {
+  transform: scale(1.25);
+  background-color: rgb(238, 236, 183);
+
+}
+
+.hard:hover {
+  transform: scale(1.25);
+  background-color: rgb(239, 108, 108);
+}
+
+/* Instructions */
+
+#instructionsContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#instructions {
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  border: 3px solid rgba(230, 170, 225, 0.65);
+  -webkit-box-shadow: 12px 3px 23px 3px rgba(230, 170, 225, 0.65);
+  -moz-box-shadow: 12px 3px 23px 3px rgba(230, 170, 225, 0.65);
+  box-shadow: 12px 3px 23px 3px rgba(230, 170, 225, 0.65);
+  border-radius: 20px;
+  padding: 3em;
+}
+
+.instructionsButton {
+        font-size: 1.5rem;
+        padding: 0.2em 0.5em;
+        border-radius: 12px;
+        margin: 1em;
+        cursor: pointer;
+        transition-property: transform, background-color;
+        transition-duration: 0.5s;
+}
+
+.instructionsButton:hover {
+    transform: scale(1.25);
+    background-color: rgb(224, 241, 240);
+}
+
+/* Walter White */
+
+#man-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#man {
+    margin-top: 1em;
+    width: 15%;
+}
+
+#comment-box {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px dashed black;
+  padding: 1em;
+}
+
+.attemptBox {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}

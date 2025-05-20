@@ -1,0 +1,53 @@
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            nav {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                position: relative;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+            nav ul li {
+                margin-right: 20px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            #menuToggle {
+                display: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            @media (max-width: 600px) {
+                #menuToggle {
+                    display: block;
+                }
+
+                #menuItems {
+                    display: none;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                }
+
+                nav ul li {
+                    margin-top: 10px;
+                }
+            }
+        }

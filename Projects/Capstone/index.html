@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Tester</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- This part is the Title and buttons -->
+
+        <h1>Memory Tester 🧠</h1>
+        <p>Test how much you can remember!</p>
+        <button class="button-theme" id="theme-button">Toggle Theme</button>
+        <button class="button-theme" id="history-button">View History</button>
+
+        <!-- Memory Container - Where all the stuff is -->
+
+        <main class="memory-container" id="memory-container">
+
+            <!-- Welcome Section -->
+            <section class="welcome" id="welcome-container">
+                <h2 id="welcome-title">Welcome to the Memory Tester!</h2>
+                <h3 id="welcome-text" style="line-height: 2em;">It seems like it's your first time. Please enter your first name.</h3>
+
+                <input type="text" placeholder="Enter name here..." id="name-input">
+                <p id="error-text" style="color: white;"></p>
+                <button class="button-theme" id="submit-name">Submit</button>
+            </section>
+
+            <!-- Lose Section -->
+            <section id="lose-screen" class="welcome">
+                <h2>You clicked a wrong one!</h2>
+                <p>It's ok. The more you do this, the better you become. 😉</p>
+                <p id="score"></p>
+                <button class="button-theme" onclick="callCard()">Try Again</button>
+            </section>
+
+            <!-- Where all 'Memory-cards' get populated -->
+            <div id="memory-cards-container">
+
+            </div>
+        </main>
+        
+        <!-- The history box when the view history button is pressed -->
+        <div class="history" id='history-container'>
+            <div id="history-controls">
+                <input type="text" placeholder="Search game by Date. (dd/mm/yyyy)" id="history-search">
+
+                <!-- Buttons -->
+                <div>
+                    <button class="button-theme" id="exit-button">Exit</button>
+                    <button class="button-theme" id="clear-button">Clear Test History</button>
+                    <button class="button-theme" id="clear-name-button">Clear Name (refreshes)</button>
+                </div>
+            </div>
+
+            <!-- Where all the tests get populated  -->
+            <div id="history-cards">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The footer is where the session time is updated. -->
+    <footer id="footer"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

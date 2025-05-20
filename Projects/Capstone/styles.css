@@ -1,0 +1,367 @@
+/* Color Variables */
+.light-theme {
+    --base-primary: white;
+    --base-secondary: #eeeeee;
+    --base-thirdary: white;
+    --primary: #5e87e6;
+    --secondary: #3355a5;
+    --text: black;
+    --text2: white;
+    --accent: #bcbcbc;
+    
+}
+
+.dark-theme {
+    --base-primary: #0b0b0b;
+    --base-secondary: rgb(24, 24, 24);
+    --base-thirdary: rgb(46, 46, 46);
+    --primary: #475676;
+    --secondary: #536eab;
+    --text: #bbbbbb;
+    --text2: #bbbbbb;
+    --accent: #cccccc;
+}
+
+
+/* Initalization */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--base-primary);
+}
+
+/* Container and General*/
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+p {
+    color: var(--text)
+}
+
+.transition {
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+}
+
+/* Welcome Screen */
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--text2);
+    background-color: var(--primary);
+    padding: 2em;
+}
+
+.welcome > p {
+    color: var(--text2)
+}
+
+.welcome > h2 {
+    font-size: 2.5rem;
+}
+
+.welcome > h3 {
+    font-size: 1.0rem;
+    padding: 1em;
+}
+
+.welcome > input[type="text"] {
+    width: 80%;
+    height: 3em;
+    margin: 1em;
+    border: 2px solid var(--secondary);
+    background-color: var(--base-secondary);
+    color: var(--text);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.welcome > button {
+    box-shadow: none;
+    background-color: var(--text2);
+    color: var(--primary);
+    font-weight: bold;
+    padding: 1em 2em 1em 2em;
+}
+
+/* Memory Container */
+
+.memory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    min-height: calc(65vh - 8em);
+    max-height: 65vh;
+    margin-top: 2em;
+    padding: 3em;
+    background-color: var(--base-secondary);
+    border-radius: 10px;
+}
+
+#memory-cards-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.memory-card {
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text);
+    width: 4em;
+    height: 4em;
+    background-color: var(--base-primary);
+    margin: 0.3em;
+    border-radius: 10px;
+    border: 3px solid var(--accent);
+    cursor: pointer;
+    user-select: none;
+}
+
+.memory-visible {
+    visibility: visible;
+}
+
+.memory-flipped {
+    background-color: var(--base-secondary);
+    color: var(--base-secondary);
+    transform: rotateX(180deg);
+    transition-property: transform, background-color, color;
+    transition-duration: 0.3s;
+}
+
+/* Lose Screen */
+
+#lose-screen {
+    display: none;
+}
+
+#lose-screen > * {
+    margin: 0.5em;
+}
+
+#lose-screen > p {
+    font-size: 1.3rem;
+    margin-bottom: 2em;
+}
+
+/* Theme Button */
+
+.button-theme {
+    margin: 1em 0 0 0;
+    padding: 0.5em;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--text);
+    /* box-shadow: 10px 10px 13px -7px rgba(167,164,164,0.75);
+-webkit-box-shadow: 10px 10px 13px -7px rgba(167,164,164,0.75);
+-moz-box-shadow: 10px 10px 13px -7px rgba(167,164,164,0.75); */
+
+transition: transform 0.3s;
+}
+
+.button-theme:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* History */
+
+#history-container {
+    display: none;
+    grid-template-rows: 1fr 3fr;
+    position: absolute;
+    top: 10%;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 8px solid var(--accent);
+}
+
+#history-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+    height: 23em;
+    color: var(--text);
+    background-color: var(--base-primary);
+    overflow: auto;
+
+}
+
+#history-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--base-secondary);
+}
+
+#history-search {
+    color: var(--text);
+    background-color: var(--base-secondary);
+    width: 50%;
+    text-align: center;
+    padding: 0.5em;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+}
+
+.history-card {
+    
+    width: fit-content;
+    height: fit-content;
+    margin: 0.7em;
+    padding: 1em;
+    color: var(--text);
+    font-size: 1.2rem;
+    border-radius: 12px;
+    background-color: var(--base-secondary);
+}
+
+#exit-button {
+    background-color: #5d1313;
+}
+
+#clear-button {
+    background-color: var(--base-primary);
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--text);
+    padding: 20px;
+}
+
+/* Media Query */
+
+@media (max-width: 1060px) {
+    .memory-card {
+        width: 5rem;
+        height: 5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        
+    }
+
+    .welcome > h2 {
+        font-size: 1.5rem;
+    }
+    
+    .welcome > h3 {
+        font-size: 1.0rem;
+        padding: 1em;
+    }
+
+    .memory-card {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .welcome > input[type="text"] {
+        height: 2em;
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    #history-search {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #history-container {
+        width: 70%;
+    }
+
+    #history-cards > * {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.6rem;
+    }
+
+    .memory-card {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .welcome > input[type="text"] {
+        font-size: 1rem;
+        width: 90%;
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .welcome > h2 {
+        font-size: 1.0rem;
+    }
+    
+    .welcome > h3 {
+        font-size: 0.6rem;
+        padding: 1em;
+    }
+
+    .memory-card {
+        width: 40px;
+        height: 40px;
+        font-size: 0.6rem;
+    }   
+}
+
+
+

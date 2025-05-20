@@ -1,0 +1,105 @@
+/* Setup */
+
+:root {
+background-color: #eeeeee;
+}
+
+* {
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Container */
+
+.container {
+    margin: 10px 20px 10px 20px;
+}
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: #333333;
+    color: white
+}
+
+/* Header --> Nav */
+
+
+
+ul {
+    display: flex;
+    width: 16em;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+li > a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* Main Content */
+
+.main {
+    background-color: white;
+    display: flex;
+    padding: 25px;
+    margin-top: 20px;
+    align-content: center;
+}
+
+.main > img {
+    border-radius: 10px;
+    max-width: 250px;
+    max-height: 250px;
+    margin-right: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px;
+    background-color: #333333;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Recent Posts Section */
+
+h3 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.recent-flex-container {
+    display: flex;
+    margin: 8px;
+    justify-content: space-evenly;
+}
+
+.recent-flex-item {
+    background-color: white;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: #333333;
+    padding: 25px;
+    color: white;
+    
+}

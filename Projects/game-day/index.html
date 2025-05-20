@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Color game</title>
+
+    <!-- Font Family links -->
+
+    <!-- The cool looking one -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Chewy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Difficulty Select -->
+
+      <div id="difficulty">
+        <h1 id="rainbowWord">
+          Welcome to the Color Game!
+        </h1>
+        <h2>
+          Please pick a difficulty. The harder the level, the more difficult the
+          colors.
+        </h2>
+        <div class="difficultyBtnContainer">
+          <button class="easy" onclick="difficultyPick('easy')">Easy</button>
+          <button class="medium" onclick="difficultyPick('medium')">
+            Medium
+          </button>
+          <button class="hard" onclick="difficultyPick('hard')">Hard</button>
+        </div>
+      </div>
+
+      <!-- You Win Display -->
+
+      <div id="youWin">
+        <h2 class="youWinTitle">You won the color game!!! 🥳</h2>
+        <button onclick="tryAgain()" id="tryAgainButton">Try again?</button>
+      </div>
+
+      <!-- Instructions -->
+
+      <div id="instructionsContainer">
+        <div id="instructions">
+          <h1>Instructions</h1>
+          <br>
+
+        <h2>There are three colors you have to guess.</h2>
+          <h2>
+            At the bottom are 'hints' which you will need to guess all three
+            (unless you are a rebel).
+          </h2>
+          <h2>Each hint reveals a color but not the color name.</h2>
+          <h2>On the left is the word bank. It has all the possible colors.</h2>
+          <h2>
+            The color must be put in the way it is shown on the word bank. It is
+            <i>not</i> case sensitive. Good luck!
+          </h2>
+
+          <button onclick="continueGame()" class="instructionsButton">I understand!</button>
+          </div>
+      </div>
+
+      <!-- Actual Game -->
+
+      <div class="grid-container" id="grid-container">
+        <!-- Left side section: Word Bank -->
+
+        <div class="grid-item1">
+          <div class="no-copy-box"></div>
+          <h2>Word Bank:</h2>
+          <div id="wordBank"></div>
+        </div>
+
+        <!-- Main Section: The game select & instructions -->
+
+        <div class="grid-item2" id="background">
+          <div class="grid-item2-container"></div>
+          <div class="attempts">Attempts: <span id="attemptNum">0</span></div>
+          <div class="attempts">
+            Successful Attempts: <span id="successfulAttemptNum">0</span>
+          </div>
+          <h1 id="nameTitle">Pick a color!</h1>
+          <input
+            type="text"
+            id="colorInput"
+            placeholder="Put a color here."
+            autocomplete="off"
+          />
+          <button onclick="colorChecker()" class="submitButton">Enter</button>
+
+          <div id="result" style="font-size: 2em; font-weight: bold;"></div>
+
+          <!-- Random rainbow gifs -->
+
+          <div id="man-container">
+            <div id="img-container" style="text-align: center;">
+          <img src="manhappy.png" alt="man happy" id="man">
+          </div>
+          <div id="comment-box">Hello player! Welcome to my game. Call me... the <b>man</b>. Try out a color - any color!</div>
+          </div>
+        </div>
+
+        <!-- Bottom footer section: Hint Container -->
+
+        <div class="grid-item3">
+          <div class="hint-container" id="hint-container">
+            <div id="colorBlocks"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music -->
+
+    <audio src="music/angrymusic.mp3" id="angrymusic" preload="auto"></audio>
+    <audio src="music/happymusic.mp3" id="happymusic" preload="auto"></audio>
+    <audio src="music/wrongsfx.mp3" id="wrongsfx" preload="auto"></audio>
+    <audio src="music/correctsfx.mp3" id="correctsfx" preload="auto"></audio>
+
+    <script src="script2.js" defer></script>
+  </body>
+</html>

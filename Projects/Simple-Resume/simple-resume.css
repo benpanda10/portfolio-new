@@ -1,0 +1,64 @@
+/* Setup */
+
+:root {
+    background-color: rgb(236, 234, 234);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 21px;
+}
+
+
+/* Container */
+
+.container {
+    max-width: 794px;
+    height: 1122px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 15px 15px 20px rgb(220, 210, 210);
+}
+
+/* General Styling */
+
+hr {
+    margin: 10px 0 20px 0;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+
+/* Experience */
+
+.experience-date {
+    font-style: italic;
+    font-weight: 50;
+    font-size: 0.9em;
+    color: grey;
+}
+
+/* Education */
+
+#bachelor {
+    font-weight: bold;
+}

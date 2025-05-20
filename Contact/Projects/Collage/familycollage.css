@@ -1,0 +1,91 @@
+:root {
+    background-color: #fdf5e8;
+}
+
+/* Main CSS */
+
+
+.container {
+    width:100%;
+    position: relative;
+}
+
+.img-all {
+    
+   
+    max-width:100%;
+    max-height:auto;
+    
+}
+
+
+.family-title {
+    left: 32vw;
+    top: 40vh;
+}
+
+/* Mom with Child */
+
+.img1 {
+    max-width:100%;
+    max-height:auto;
+    position: absolute;
+    left: 32vw;
+    top: 9.5vh;
+    
+}
+
+/* Salad 1 */
+
+.img2 {
+    max-width:100%;
+    max-height:auto;
+    position: absolute;
+    left: 49.5vw;
+    top: 4vh;
+
+}
+
+/* Mom and Dad */
+
+.img3 {
+    position: absolute;
+    left: 69vw;
+    top: 19.8vh;
+  
+}
+
+/* Fam having fun together */
+
+.img4 {
+    left: 14vw;
+    top: 40.5vh;
+}
+
+/* Family cooking together */
+
+.img5 {
+    left: 69.4vw;
+    top: 40.3vh;
+}
+
+/* Kids cooking */
+
+.img6 {
+    left: 20.8vw;
+    top: 62vh;
+}
+
+/* Salad 2*/
+
+.img7 {
+    left: 32.1vw;
+    top: 61.5vh;
+}
+
+/* Dad with Son */
+
+.img8 {
+    left: 52vw;
+    top: 61.8vh;
+}

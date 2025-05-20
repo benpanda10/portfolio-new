@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Adventure</title>
+    <link rel="stylesheet" type="text/css" href="travel-form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adventure Travel Club</h1>
+        <p id="caption">Begin your journey with fellow adventurers</p>
+        <div class="info-box">
+
+            <!-- Personal Information -->
+
+            <h3>Personal Information</h2>
+            <hr>
+                <form>
+                  <div class="personal-flex-container">
+                    <div class="fname">
+                        <label for="fname">First Name</label>
+                        
+                        <input type="text" id="fname" name="fname">
+                    </div>
+
+                    <div class="lname">
+                        <label for="lname">Last Name</label>
+                        
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                </div>
+
+
+
+                    <div class="email">
+                        <label for="email">Email Address</label>
+                        
+                        <input type="email" id="email" name="email"> 
+                    </div>
+
+                    <div class="dob">
+                        <label for="dob">Date of Birth</label>
+                        
+                        <input type="date" id="dob" name="dob">
+                    </div>
+               
+                </form>
+
+                
+        </div>
+
+
+        <div class="info-box">
+            <h3>Adventure Preferences</h3>
+            <hr>
+
+            <form>
+                <label for="exp">Experience Level</label>
+                <select id="exp">
+                    <option value="">Select your Experience Level</option>
+                    <option value="beginner">Beginner (<1 Year) </option>
+                    <option value="inter">Intermediate (1-2 Years)</option>
+                    <option value="pro">Professional (2+ Years)</option>
+                </select>
+
+                <div class="label-correcting">
+                    
+                <label>Preferred Activites</label>
+                    <br><br>
+                <input type="checkbox" name="pre-act" id="hiking" value="hiking">
+                <label for="hiking">Hiking</label>
+                <br>
+                <input type="checkbox" name="pre-act" id="rock" value="rock">
+                <label for="rock">Rock Climbing</label>
+                <br>
+                <input type="checkbox" name="pre-act" id="kayak" value="kayak">
+                <label for="kayak">Kayaking</label>
+                <br>
+                <input type="checkbox" name="pre-act" id="scuba" value="scuba">
+                <label for="scuba">Scuba Diving</label>
+                
+                <br>
+                <br>
+
+                <label>Preferred Week Duration</label>
+                    <br><br>
+                <input type="radio" id="weekend" name="duration">
+                <label for="weekend">Weekend Trips (2-3 Days)</label>
+                    <br>
+                <input type="radio" id="week" name="duration">
+                <label for="week">Week-long Adventures (5-7 Days)</label>
+                    <br>
+                <input type="radio" id="extend" name="duration">
+                <label for="extend">Extended Expedition (2+ Weeks)</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-box">
+            <h3>Additional Information</h3>
+            <hr>
+<form>
+            <label for="fitness">Fitness Level (1-10)</label>
+            <input type="range" id="fitness" min="0" max="10">
+
+            <br>
+            <label for="you-info">Tell us about yourself</label>
+            <textarea for="you-info" cols="86" rows="8" placeholder="Share your adventure experiences and what excities you about joining our club..."></textarea>
+            <br>
+            <label for="pfp">Profile Photo</label>
+            <div class="pfp-box">
+                <input type="file" id="pfp" name="pfp" accept=".png, .jpeg"
+            </div>
+        </div>
+    <div class="label-correcting" id="tnc">
+        <input type="checkbox" id="tnc" name="check" value="accepted">
+        <label for="tnc">I agree to the Terms and Conditions and Privacy Policy</label>
+    </form>
+        </div>
+
+        <a href="#submit"><p class="button">Submit Registration</p></a>
+    </div>
+        
+</body>
+</html>

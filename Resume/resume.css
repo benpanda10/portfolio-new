@@ -1,0 +1,173 @@
+/* Setup */
+
+:root {
+background-color: white;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+        font-family: "Merriweather", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+/* Navigation */
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.box3 > ul {
+    width: auto;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+ul > * {
+    padding: 10px;
+}
+
+li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    margin: 60px;   
+}
+
+
+
+.box1 {
+    display: flex;
+    align-items: center;
+    grid-column: span 1;
+    background-color: #1a435f;     
+}
+
+.box1 > img {
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.box2 {
+    grid-column: span 2;
+    background-color: #256087;
+}
+
+.box3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column: span 7;
+    background-color: #2e75a4;
+    padding: 0 30px 0 30px;   
+}
+
+/* Hero Image */
+
+.hero-image {
+    width: 100%;
+    height: 88vh;
+    background-color: rgb(211, 229, 235);
+    padding: 2em;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 7px;
+    margin-top: 0.5em;
+    line-height: 1.5em;
+}
+
+h6 {
+    text-align: center;
+}
+
+/* Hero Image -- Button */
+
+.hero-button {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 6em;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #529ed1;
+}
+
+.hero-button > p {
+    text-align: center;
+}
+.hero-button a {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+
+}
+
+/* About Me Section */
+
+#aboutme { 
+    width: 100%;
+    padding: 3em;
+    background-color: #eeeeee;
+}
+
+.aboutme-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#aboutme p {
+    width: 55%;
+    line-height: 2em;
+    word-spacing: 1px;
+    padding-top: 1em;
+}
+
+.aboutme-pic {
+    width: 400px;
+    height: 400px;
+    background-color: #2e75a4;
+    border-radius: 100%;
+    
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: #2e75a4;
+    color: white;
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100vh - 165px);
+}
+
+/* Media Query */
+
+@media (max-width: 800px) {
+    .nav {
+        grid-template-columns: 1fr;
+    }
+    
+    .box1 > img {
+        width: 200px;
+        height: 200px;
+        
+    }
+}

@@ -1,0 +1,184 @@
+/* Setup */
+
+:root {
+    background-color: #dfedf1;
+    }
+    
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+            font-family: "Merriweather", serif;
+            font-weight: 400;
+            font-style: normal;
+    }
+    
+    /* Navigation */
+    
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    
+    .box3 > ul {
+        width: auto;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    
+    ul > * {
+        padding: 10px;
+    }
+    
+    li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3em;
+        margin: 60px;   
+    }
+    
+    
+    
+    .box1 {
+        display: flex;
+        align-items: center;
+        grid-column: span 1;
+        background-color: #1a435f;     
+    }
+    
+    .box1 > img {
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
+    .box2 {
+        grid-column: span 2;
+        background-color: #256087;
+    }
+    
+    .box3 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: span 7;
+        background-color: #2e75a4;
+        padding: 0 30px 0 30px;   
+    }
+    
+    /* Main section */
+
+    .main {
+        padding: 2em;
+        margin-bottom: 5rem;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        font-size: 3rem;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em;
+        padding: 1em;
+        background-color: white;
+        border: 3px dashed #1a435f
+    }
+
+    /* Main Section -- Card Design */
+
+    h3 {
+        padding: 1em;
+        color: #256087;
+        text-align: center;
+    }
+
+    .card-button {
+        width: 30%;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        padding: 0.6em;
+        background-color: rgb(245, 173, 41);
+        border-radius: 10px;
+    }
+
+    .card > img {
+        width: 80%;
+        padding-bottom: 1em;
+    }
+
+    .card > p {
+        margin-top: 1em;
+    }
+    
+    #resume-pic {
+        width:50%;
+    }
+
+    #blog-pic {
+        margin-bottom: 6em;
+    }
+    /* Footer */
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #2e75a4;
+        color: white;
+        padding: 20px;
+    }
+    
+    /* Media Query */
+    
+    @media (max-width: 800px) {
+        .nav {
+            grid-template-columns: 1fr;
+        }
+        
+        .box1 > img {
+            width: 200px;
+            height: 200px;
+            
+        }
+    
+        h1 {
+            font-size: 3rem;
+        }
+    
+        .hero-button {
+            margin-top: 3em;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.8rem;
+            
+        }
+    
+        .hero-button {
+            width: 60%;
+        }
+    
+    }

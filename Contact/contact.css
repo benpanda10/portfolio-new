@@ -1,0 +1,209 @@
+/* Setup */
+
+:root {
+    background-color: #ecf2f7;
+    }
+    
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+            font-family: "Merriweather", serif;
+            font-weight: 400;
+            font-style: normal;
+    }
+    
+    /* Navigation */
+    
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    
+    .box3 > ul {
+        width: auto;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    
+    ul > * {
+        padding: 10px;
+    }
+    
+    li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3em;
+        margin: 60px;   
+    }
+    
+    
+    
+    .box1 {
+        display: flex;
+        align-items: center;
+        grid-column: span 1;
+        background-color: #1a435f;     
+    }
+    
+    .box1 > img {
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    
+    .box2 {
+        grid-column: span 2;
+        background-color: #256087;
+    }
+    
+    .box3 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column: span 7;
+        background-color: #2e75a4;
+        padding: 0 30px 0 30px;   
+    }
+    
+    /* Main CSS: Form & Info */
+
+    .body-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 88vh;
+    }
+
+    .item2 {
+        grid-column: span 2;
+    }
+
+    .item1, .item2 {
+        padding: 3em;
+    }
+
+    /* Main CSS: Contact Info Box */
+
+    .contact-info {
+        padding: 1.5em;
+        background-color: #2e75a4;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .contact-info * {
+        padding: 1em 0;
+    }
+
+    /* Iframe Google Map */
+
+    iframe {
+        padding-top: 2em;
+        width: 100%;
+        max-width: 800px;
+        height: 100%;
+        max-height: 350px;
+    }
+
+    /* Main CSS: Form Info Box */
+
+    .form-info {
+        padding: 1.5em;
+        background-color: #256087;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 10px;
+    }
+
+    form {
+        padding: 1em;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        border: 4px solid #1a435f
+    }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    label:after {
+        content: " *";
+        color:red;
+    }
+    
+    input {
+        width: 40%;
+        border: 1px solid #1a435f;
+        border-radius: 5px;
+        padding: 0.3em;
+    }
+
+    textarea {
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* Submit button */
+
+    button {
+        width: 8em;
+        
+        padding: 0.5em;
+        background-color: #2e75a4;
+        border: 2px solid #1a435f;
+        border-radius: 5px;
+        color: white;
+        font-family: "Merriweather", serif;
+
+    }
+    
+    /* Footer */
+    
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        background-color: #2e75a4;
+        color: white;
+        padding: 20px;
+    }
+    
+    /* Media Query */
+    
+    @media (max-width: 800px) {
+        .nav {
+            grid-template-columns: 1fr;
+        }
+        
+        .box1 > img {
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        .body-container {
+            grid-template-columns: 1fr;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        iframe {
+            padding-bottom: 3em;
+        }
+    }
+
+    
